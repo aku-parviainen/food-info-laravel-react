@@ -15,7 +15,7 @@ class FoodController extends Controller
      */
     public function index()
     {
-        var_dump(Food::all()->toArray());
+        //
     }
 
     /**

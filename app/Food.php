@@ -69,5 +69,14 @@ class Food extends Model
         'created_at', 
         'updated_at'
     ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'external_id', 'created_at', 'updated_at'
+    ];
     
 }
