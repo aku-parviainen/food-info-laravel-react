@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('import/fineli', 'FoodController@importFineliCSV');
+Route::get('foods', 'FoodController@index');
