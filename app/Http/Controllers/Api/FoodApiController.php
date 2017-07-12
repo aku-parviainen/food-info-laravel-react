@@ -15,7 +15,7 @@ class FoodApiController extends Controller
      */
     public function getFoods()
     {
-        return Food::paginate(30)->toJson();
+        return Food::paginate(15)->toJson();
     }
 
     /**
@@ -25,7 +25,36 @@ class FoodApiController extends Controller
      */
     public function getFoodByID($id)
     {
-        return Food::where('id', $id)->first()->toJson();
+        $food = Food::where('id', $id)->first();
+
+        if ($food === null) {
+            return response()->json([
+                'message' => 'Item not found',
+            ], 404);
+        }
+
+        return $food->toJson();
     }
+
+    /**
+     * Get food by query string
+     *
+     * @return JSON
+     */
+    public function getFoodBySearch()
+    {   
+        $query = $_GET['q'];
+        $food = Food::where('name', 'LIKE', '%' . $query . '%')->paginate(15);
+
+
+        if ($food === null) {
+            return response()->json([
+                'message' => 'Item not found',
+            ], 404);
+        }
+
+        return $food->toJson();
+    }
+
 
 }

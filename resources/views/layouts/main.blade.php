@@ -26,6 +26,7 @@
     @yield('content')
 
     <!-- Scripts -->
+    <script src="/js/lang.js"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
 
 </body>
