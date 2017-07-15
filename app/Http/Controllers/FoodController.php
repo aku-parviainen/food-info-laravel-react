@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Helpers\ImportFineliCSV;
 use App\Food;
 
 class FoodController extends Controller
@@ -84,14 +83,4 @@ class FoodController extends Controller
         //
     }
 
-    /**
-     * 
-     */
-    public function importFineliCSV() {
-
-        $fineliImport = new importFineliCSV();
-
-        $fineliImport->importFineliCSV();
-
-    }
 }

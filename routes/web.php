@@ -15,8 +15,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('import/fineli', 'FoodController@importFineliCSV');
-
 // Redirect to react app, where further routing is handled via react-router
 Route::get('foods', 'FoodController@index');
 Route::get('foods/{id}', 'FoodController@index');
