@@ -13,7 +13,7 @@
 
 // Localization (generate and cache global json file with translations)
 Route::get('/js/lang.js', function () {
-    //$strings = Cache::rememberForever('lang.js', function () {
+    $strings = Cache::rememberForever('lang.js', function () {
         $strings = "";
         $lang = config('app.locale');
 
@@ -25,8 +25,8 @@ Route::get('/js/lang.js', function () {
             $strings[$name] = require $file;
         }
 
-        //return $strings;
-    //});
+        return $strings;
+    });
 
     header('Content-Type: text/javascript');
     echo('window.i18n = ' . json_encode($strings) . ';');
@@ -35,7 +35,7 @@ Route::get('/js/lang.js', function () {
 
 /* 
  * Redirect everything else to react app, where further routing is handled via react-router 
- * Must be at bottom as the last route!
+ * Must be at the bottom as the last route!
  */
 Route::any('{query}', function() { 
     return view('home'); 
