@@ -85,7 +85,6 @@ class FrontContainer extends Component {
   render() {
     return (
       <div>
-        <Header />
         
         <Grid>
           <Row>

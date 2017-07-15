@@ -13,7 +13,7 @@ class FoodListSearch extends Component {
         <FormGroup controlId="formBasicText">
           <FormControl
             type="text"
-            placeholder="Hae elintarvikkeista"
+            placeholder={i18n.app.search_food_items}
             onKeyUp={this.props.handleSearch}
           />
         </FormGroup>

@@ -40,8 +40,7 @@ class FoodContainer extends Component {
 
     return (
       <div>
-        <Header />
-        
+
         <Grid>
           <Row>
             <Col md={12}>
@@ -51,15 +50,19 @@ class FoodContainer extends Component {
           <Row>
             <Col md={12}>
               <Panel>
-                <Col md={6}>
+                <Col md={12}>
                   <Table className="foods-table" hover>
                     <thead>
                       <tr>
                         <td>{i18n.app.food_component}</td>
-                        <td>{i18n.app.amount}</td>
+                        <td>{i18n.app.amount} (g)</td>
                       </tr>
                     </thead>
                     <tbody>
+                      <tr>
+                        <td>{i18n.app.energy}</td>
+                        <td>{this.state.food.energy_kj}</td>
+                      </tr>
                       <tr>
                         <td>{i18n.app.protein}</td>
                         <td>{this.state.food.protein}</td>
@@ -71,6 +74,18 @@ class FoodContainer extends Component {
                       <tr>
                         <td>{i18n.app.carbohydrate}</td>
                         <td>{this.state.food.carbs}</td>
+                      </tr>
+                      <tr>
+                        <td>{i18n.app.fibre}</td>
+                        <td>{this.state.food.fibre}</td>
+                      </tr>
+                      <tr>
+                        <td>{i18n.app.sugar}</td>
+                        <td>{this.state.food.sugars}</td>
+                      </tr>
+                      <tr>
+                        <td>{i18n.app.alcohol}</td>
+                        <td>{this.state.food.alcohol}</td>
                       </tr>
                     </tbody>
                   </Table>

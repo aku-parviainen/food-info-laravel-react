@@ -11,7 +11,7 @@ const createRoutes = () => (
         <Switch>
             <Route exact path="/" component={FrontContainer}/>
             <Route exact path="/foods/:foodId" component={FoodContainer}/>
-            <Route path='*' component={NotFoundContainer} />
+            <Route path='*' component={NotFoundContainer}/>
         </Switch>
     </BrowserRouter>
 );

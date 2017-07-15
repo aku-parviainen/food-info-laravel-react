@@ -3,6 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom'
 
 class FoodContainer extends Component {
 
@@ -13,17 +14,18 @@ class FoodContainer extends Component {
   render() {
     return (
       <div>
-        <Header />
 
         <Grid fluid={true}>
           <Row>
             <Col md={12}>
-              <p>{i18n.app.page_not_found}</p>
+              <div className="text-center">
+                <br />
+                <p>{i18n.app.page_not_found}</p>
+                <p><Link to="/">{i18n.app.back_to_home}</Link></p>
+              </div>
             </Col>
           </Row>
         </Grid>
-
-        <Footer />
       </div>
     )
   }
