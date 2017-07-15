@@ -36,7 +36,7 @@ class Food extends Model
         'saturated_fatty_acids',
         'n_3_polyunsaturated_fatty_acids',
         'n_6_polyunsaturated_fatty_acids',
-        'linoleic_acid',
+        /*'linoleic_acid',
         'alpha_linolenic_acid',
         'epa_fatty_acids',
         'dha_fatty_acids',
@@ -65,7 +65,7 @@ class Food extends Model
         'carotenoids',
         'vitamin_d',
         'vitamin_e',
-        'vitamin_k', 
+        'vitamin_k', */
         'created_at', 
         'updated_at'
     ];
