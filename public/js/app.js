@@ -45981,50 +45981,68 @@ var FoodList = function (_Component) {
           food: this.props.foods[key],
           key: key }));
       }
+
       return foodsList;
+    }
+  }, {
+    key: 'renderFoodsListTable',
+    value: function renderFoodsListTable() {
+      if (this.renderFoodsList().length == 0) {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'text-center' },
+          i18n.app.no_search_results
+        );
+      } else {
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["i" /* Table */],
+          { className: 'foods-table', hover: true },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'thead',
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'tr',
+              null,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                null,
+                i18n.app.name
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                null,
+                i18n.app.protein,
+                ' (g)'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                null,
+                i18n.app.fat,
+                ' (g)'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'td',
+                null,
+                i18n.app.carbohydrate,
+                ' (g)'
+              )
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'tbody',
+            null,
+            this.renderFoodsList()
+          )
+        );
+      }
     }
   }, {
     key: 'render',
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["i" /* Table */],
-        { className: 'foods-table', hover: true },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'thead',
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'tr',
-            null,
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'td',
-              null,
-              i18n.app.name
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'td',
-              null,
-              i18n.app.protein,
-              ' (g)'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'td',
-              null,
-              i18n.app.fat,
-              ' (g)'
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'td',
-              null,
-              i18n.app.carbohydrate,
-              ' (g)'
-            )
-          )
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'tbody',
-          null,
-          this.renderFoodsList()
-        )
+        'div',
+        null,
+        this.renderFoodsListTable()
       );
     }
   }]);
@@ -46083,17 +46101,17 @@ var FoodListItem = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'td',
           null,
-          this.props.food.protein
+          this.props.food.protein ? this.props.food.protein : "-"
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'td',
           null,
-          this.props.food.fat
+          this.props.food.fat ? this.props.food.fat : "-"
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'td',
           null,
-          this.props.food.carbs
+          this.props.food.carbs ? this.props.food.carbs : "-"
         )
       );
     }
@@ -46204,6 +46222,58 @@ var FoodListSearch = function (_Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (FoodListSearch);
+
+/***/ }),
+
+/***/ "./resources/assets/js/react-app/components/FoodTableItem.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__("./node_modules/react/react.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+var FoodTableItem = function (_Component) {
+  _inherits(FoodTableItem, _Component);
+
+  function FoodTableItem() {
+    _classCallCheck(this, FoodTableItem);
+
+    return _possibleConstructorReturn(this, (FoodTableItem.__proto__ || Object.getPrototypeOf(FoodTableItem)).apply(this, arguments));
+  }
+
+  _createClass(FoodTableItem, [{
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'tr',
+        null,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'td',
+          null,
+          this.props.name
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'td',
+          null,
+          this.props.value
+        )
+      );
+    }
+  }]);
+
+  return FoodTableItem;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
+
+/* harmony default export */ __webpack_exports__["a"] = (FoodTableItem);
 
 /***/ }),
 
@@ -46331,7 +46401,8 @@ var Header = function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Header__ = __webpack_require__("./resources/assets/js/react-app/components/Header.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Footer__ = __webpack_require__("./resources/assets/js/react-app/components/Footer.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_router_dom__ = __webpack_require__("./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_FoodTableItem__ = __webpack_require__("./resources/assets/js/react-app/components/FoodTableItem.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_router_dom__ = __webpack_require__("./node_modules/react-router-dom/es/index.js");
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -46339,6 +46410,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -46383,8 +46455,41 @@ var FoodContainer = function (_Component) {
     value: function render() {
       var notFound = this.state.notFound;
 
+      var foodTableItems = [{
+        name: i18n.app.energy,
+        value: this.state.food.energy_kj
+      }, {
+        name: i18n.app.protein,
+        value: this.state.food.protein
+      }, {
+        name: i18n.app.fat,
+        value: this.state.food.fat
+      }, {
+        name: i18n.app.carbohydrate,
+        value: this.state.food.carbohydrate
+      }, {
+        name: i18n.app.fibre,
+        value: this.state.food.fibre
+      }, {
+        name: i18n.app.sugar,
+        value: this.state.food.sugar
+      }, {
+        name: i18n.app.alcohol,
+        value: this.state.food.alcohol
+      }];
+
+      var foodTableItemsArray = [];
+      for (var key in foodTableItems) {
+        if (foodTableItems[key].value) {
+          foodTableItemsArray.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_FoodTableItem__["a" /* default */], {
+            name: foodTableItems[key].name,
+            value: foodTableItems[key].value,
+            key: key }));
+        }
+      }
+
       if (notFound) {
-        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_router_dom__["c" /* Redirect */], { to: '/404' });
+        return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_react_router_dom__["c" /* Redirect */], { to: '/404' });
       }
 
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -46416,138 +46521,37 @@ var FoodContainer = function (_Component) {
                 __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["g" /* Panel */],
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Col */],
-                  { md: 12 },
+                  __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Table */],
+                  { className: 'foods-table', hover: true },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Table */],
-                    { className: 'foods-table', hover: true },
+                    'thead',
+                    null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'thead',
+                      'tr',
                       null,
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
+                        'td',
                         null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.food_component
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.amount,
-                          ' (g)'
-                        )
-                      )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'tbody',
-                      null,
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.energy
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.energy_kj
-                        )
+                        i18n.app.food_component
                       ),
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
+                        'td',
                         null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.protein
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.protein
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.fat
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.fat
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.carbohydrate
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.carbs
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.fibre
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.fibre
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.sugar
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.sugars
-                        )
-                      ),
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tr',
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          i18n.app.alcohol
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                          'td',
-                          null,
-                          this.state.food.alcohol
-                        )
+                        i18n.app.amount,
+                        ' (g)'
                       )
                     )
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'tbody',
+                    null,
+                    foodTableItemsArray
                   )
                 )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_5_react_router_dom__["b" /* Link */],
-                { to: '/' },
+                __WEBPACK_IMPORTED_MODULE_6_react_router_dom__["b" /* Link */],
+                { to: '/', className: 'btn btn-default' },
                 i18n.app.show_foods_list
               )
             )
@@ -46672,13 +46676,13 @@ var FrontContainer = function (_Component) {
   }, {
     key: 'handleSearch',
     value: function handleSearch(e) {
-      this.setState({ search: e.target.value });
-
-      if (this.state.search.length > 1) {
-        this.getFoodsBySearch();
-      } else if (this.state.search.length == 0) {
-        this.getFoods();
-      }
+      this.setState({ search: e.target.value }, function () {
+        if (this.state.search.length > 1) {
+          this.getFoodsBySearch();
+        } else {
+          this.getFoods();
+        }
+      });
     }
   }, {
     key: 'render',

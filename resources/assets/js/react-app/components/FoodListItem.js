@@ -9,9 +9,9 @@ class FoodListItem extends Component {
     return (
       <tr>
         <td><Link to={foodLink}>{this.props.food.name}</Link></td>
-        <td>{this.props.food.protein}</td>
-        <td>{this.props.food.fat}</td>
-        <td>{this.props.food.carbs}</td>
+        <td>{(this.props.food.protein) ? this.props.food.protein : "-"}</td>
+        <td>{(this.props.food.fat) ? this.props.food.fat : "-"}</td>
+        <td>{(this.props.food.carbs) ? this.props.food.carbs : "-"}</td>
       </tr>
     )
   }

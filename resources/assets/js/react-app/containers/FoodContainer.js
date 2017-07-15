@@ -3,7 +3,8 @@ import { Grid, Row, Col, Panel, Table, Button } from 'react-bootstrap';
 import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Redirect, Link } from 'react-router-dom'
+import FoodTableItem from '../components/FoodTableItem';
+import { Redirect, Link } from 'react-router-dom';
 
 class FoodContainer extends Component {
 
@@ -34,13 +35,53 @@ class FoodContainer extends Component {
   render() {
     const notFound  = this.state.notFound;
 
+    const foodTableItems = [
+      {
+        name: i18n.app.energy,
+        value: this.state.food.energy_kj
+      },
+      {
+        name: i18n.app.protein,
+        value: this.state.food.protein
+      },
+      {
+        name: i18n.app.fat,
+        value: this.state.food.fat
+      },
+      {
+        name: i18n.app.carbohydrate,
+        value: this.state.food.carbohydrate
+      },
+      {
+        name: i18n.app.fibre,
+        value: this.state.food.fibre
+      },
+      {
+        name: i18n.app.sugar,
+        value: this.state.food.sugar
+      },
+      {
+        name: i18n.app.alcohol,
+        value: this.state.food.alcohol
+      }
+    ];
+    
+    const foodTableItemsArray = [];
+    for (let key in foodTableItems) {
+      if (foodTableItems[key].value) {
+        foodTableItemsArray.push(<FoodTableItem 
+          name={foodTableItems[key].name} 
+          value={foodTableItems[key].value} 
+          key={key} />);
+      }
+    }
+
     if (notFound) {
       return <Redirect to='/404'/>;
     }
 
     return (
       <div>
-
         <Grid>
           <Row>
             <Col md={12}>
@@ -50,48 +91,19 @@ class FoodContainer extends Component {
           <Row>
             <Col md={12}>
               <Panel>
-                <Col md={12}>
-                  <Table className="foods-table" hover>
-                    <thead>
-                      <tr>
-                        <td>{i18n.app.food_component}</td>
-                        <td>{i18n.app.amount} (g)</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>{i18n.app.energy}</td>
-                        <td>{this.state.food.energy_kj}</td>
-                      </tr>
-                      <tr>
-                        <td>{i18n.app.protein}</td>
-                        <td>{this.state.food.protein}</td>
-                      </tr>
-                      <tr>
-                        <td>{i18n.app.fat}</td>
-                        <td>{this.state.food.fat}</td>
-                      </tr>
-                      <tr>
-                        <td>{i18n.app.carbohydrate}</td>
-                        <td>{this.state.food.carbs}</td>
-                      </tr>
-                      <tr>
-                        <td>{i18n.app.fibre}</td>
-                        <td>{this.state.food.fibre}</td>
-                      </tr>
-                      <tr>
-                        <td>{i18n.app.sugar}</td>
-                        <td>{this.state.food.sugars}</td>
-                      </tr>
-                      <tr>
-                        <td>{i18n.app.alcohol}</td>
-                        <td>{this.state.food.alcohol}</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </Col>
+                <Table className="foods-table" hover>
+                  <thead>
+                    <tr>
+                      <td>{i18n.app.food_component}</td>
+                      <td>{i18n.app.amount} (g)</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {foodTableItemsArray}
+                  </tbody>
+                </Table>
               </Panel>
-              <Link to="/">{i18n.app.show_foods_list}</Link>
+              <Link to="/" className="btn btn-default">{i18n.app.show_foods_list}</Link>
             </Col>
           </Row>           
         </Grid>

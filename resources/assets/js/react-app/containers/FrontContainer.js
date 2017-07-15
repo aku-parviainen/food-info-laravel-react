@@ -72,20 +72,19 @@ class FrontContainer extends Component {
   }
 
   handleSearch(e) {
-    this.setState({ search: e.target.value});
-
-    if (this.state.search.length > 1) {
-      this.getFoodsBySearch();
-    }
-    else if (this.state.search.length == 0) {
-      this.getFoods();
-    }
+    this.setState({ search: e.target.value }, function () {
+      if (this.state.search.length > 1) {
+        this.getFoodsBySearch();
+      }
+      else {
+       this.getFoods();
+      }
+    });
   }
 
   render() {
     return (
       <div>
-        
         <Grid>
           <Row>
             <Col md={12}>
@@ -112,7 +111,7 @@ class FrontContainer extends Component {
         </Grid>
         
         <Footer />
-       </div>
+      </div>
     )
   }
 }

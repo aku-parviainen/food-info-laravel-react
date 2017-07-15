@@ -13,12 +13,20 @@ class FoodList extends Component {
           key={key} />
         );
     }
+
     return foodsList;
+    
   }
 
-  render() {
-    return (
-      <Table className="foods-table" hover>
+  renderFoodsListTable() {
+    if (this.renderFoodsList().length == 0) {
+      return (
+        <div className="text-center">{i18n.app.no_search_results}</div>
+      )
+    }
+    else {
+      return (
+        <Table className="foods-table" hover>
         <thead>
           <tr>
             <td>{i18n.app.name}</td>
@@ -31,6 +39,15 @@ class FoodList extends Component {
           {this.renderFoodsList()}
         </tbody>
       </Table>
+      )
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        {this.renderFoodsListTable()}
+      </div>
     )
   }
 }

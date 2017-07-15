@@ -20,6 +20,7 @@ return [
     'page_not_found' => 'Page not found',
     'search_food_items' => 'Search food items',
     'back_to_home' => 'Back to homepage',
+    'no_search_results' => 'No search results',
 
     // Food components
     'protein' => 'Protein',
