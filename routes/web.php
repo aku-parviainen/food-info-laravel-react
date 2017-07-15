@@ -11,14 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
-// Redirect to react app, where further routing is handled via react-router
-Route::get('foods', 'FoodController@index');
-Route::get('foods/{id}', 'FoodController@index');
-
 // Localization (generate and cache global json file with translations)
 Route::get('/js/lang.js', function () {
     //$strings = Cache::rememberForever('lang.js', function () {
@@ -40,3 +32,11 @@ Route::get('/js/lang.js', function () {
     echo('window.i18n = ' . json_encode($strings) . ';');
     exit();
 })->name('assets.lang');
+
+/* 
+ * Redirect everything else to react app, where further routing is handled via react-router 
+ * Must be at bottom as the last route!
+ */
+Route::any('{query}', function() { 
+    return view('home'); 
+})->where('query', '.*');
