@@ -39,6 +39,7 @@ class FrontContainer extends Component {
           currentPage: response.data.current_page
         }
       }); 
+      console.log(response.data);
     }.bind(this))
     .catch(function (error) {
       console.log(error);

@@ -1,0 +1,11 @@
+.food-panel {
+    p {
+        padding: $food-panel-item-padding;
+    }
+
+    h3 {
+       padding: 0.2em;
+       margin: 0;
+       line-height: 1.5em;
+    }
+}

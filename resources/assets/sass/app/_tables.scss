@@ -3,6 +3,14 @@
         tr {
             td {
                 font-weight: bold;
+                padding: $food-panel-item-padding;
+            }
+        }
+    }
+    tbody {
+        tr {
+            td {
+                padding: $food-panel-item-padding;
             }
         }
     }

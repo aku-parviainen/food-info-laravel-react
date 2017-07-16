@@ -8350,5 +8350,24 @@ button.close {
 
 .foods-table thead tr td {
   font-weight: bold;
+  padding: 0.75em;
+}
+
+.foods-table tbody tr td {
+  padding: 0.75em;
+}
+
+.food-panel p {
+  padding: 0.75em;
+}
+
+.food-panel h3 {
+  padding: 0.2em;
+  margin: 0;
+  line-height: 1.5em;
+}
+
+.back-to-home-button {
+  margin-bottom: 1em;
 }
 

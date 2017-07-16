@@ -18,9 +18,8 @@ return [
     'portion_size' => 'Portion size',
     'food_component' => 'Food component',
     'page_not_found' => 'Page not found',
-    'search_food_items' => 'Search food items',
-    'back_to_home' => 'Back to homepage',
     'no_search_results' => 'No search results',
+    'info_text_portion_size' => 'Values are based on 100 g portion sizes.',
 
     // Food components
     'protein' => 'Protein',
@@ -33,5 +32,7 @@ return [
 
     // UI
     'show_foods_list' => 'Show all food items',
+    'back_to_home' => 'Back to homepage',
+    'search_food_items' => 'Search food items',
 
 ];

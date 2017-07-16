@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Panel, Table, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Panel, Table, Button, Label } from 'react-bootstrap';
 import axios from 'axios';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -36,10 +36,6 @@ class FoodContainer extends Component {
     const notFound  = this.state.notFound;
 
     const foodTableItems = [
-      {
-        name: i18n.app.energy,
-        value: this.state.food.energy_kj
-      },
       {
         name: i18n.app.protein,
         value: this.state.food.protein
@@ -90,7 +86,12 @@ class FoodContainer extends Component {
           </Row>
           <Row>
             <Col md={12}>
-              <Panel>
+              <Panel className="food-panel">
+                <h3>
+                  <Label bsStyle="info">{i18n.app.energy}</Label>&nbsp;
+                  {this.state.food.energy_kj + " kJ (" + (this.state.food.energy_kj / 4.184).toFixed(2) + " kcal)"}
+                </h3>
+
                 <Table className="foods-table" hover>
                   <thead>
                     <tr>
@@ -103,7 +104,7 @@ class FoodContainer extends Component {
                   </tbody>
                 </Table>
               </Panel>
-              <Link to="/" className="btn btn-default">{i18n.app.show_foods_list}</Link>
+              <Link to="/" className="btn btn-default back-to-home-button">{i18n.app.show_foods_list}</Link>
             </Col>
           </Row>           
         </Grid>

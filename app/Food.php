@@ -78,5 +78,19 @@ class Food extends Model
     protected $hidden = [
         'external_id', 'created_at', 'updated_at'
     ];
-    
+
+    /**
+     * Attribute Casting
+     *
+     * @var array
+     */
+    protected $casts = [ 
+        'carbs' => 'double',
+        'protein' => 'double',
+        'fat' => 'double',
+        'sugars' => 'double',
+        'alcohol' => 'double',
+        'fibre' => 'double', 
+    ];
+
 }

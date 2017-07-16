@@ -14024,7 +14024,7 @@ var Label = function (_React$Component) {
   return Label;
 }(__WEBPACK_IMPORTED_MODULE_7_react___default.a.Component);
 
-/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_8__utils_bootstrapUtils__["a" /* bsClass */]('label', __WEBPACK_IMPORTED_MODULE_8__utils_bootstrapUtils__["c" /* bsStyles */]([].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values___default.a(__WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["d" /* State */]), [__WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["e" /* Style */].DEFAULT, __WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["e" /* Style */].PRIMARY]), __WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["e" /* Style */].DEFAULT, Label)));
+/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_8__utils_bootstrapUtils__["a" /* bsClass */]('label', __WEBPACK_IMPORTED_MODULE_8__utils_bootstrapUtils__["c" /* bsStyles */]([].concat(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values___default.a(__WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["d" /* State */]), [__WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["e" /* Style */].DEFAULT, __WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["e" /* Style */].PRIMARY]), __WEBPACK_IMPORTED_MODULE_9__utils_StyleConfig__["e" /* Style */].DEFAULT, Label)));
 
 /***/ }),
 
@@ -20961,7 +20961,7 @@ var Well = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__Jumbotron__ = __webpack_require__("./node_modules/react-bootstrap/es/Jumbotron.js");
 /* unused harmony reexport Jumbotron */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__Label__ = __webpack_require__("./node_modules/react-bootstrap/es/Label.js");
-/* unused harmony reexport Label */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_27__Label__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ListGroup__ = __webpack_require__("./node_modules/react-bootstrap/es/ListGroup.js");
 /* unused harmony reexport ListGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ListGroupItem__ = __webpack_require__("./node_modules/react-bootstrap/es/ListGroupItem.js");
@@ -20983,7 +20983,7 @@ var Well = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__Nav__ = __webpack_require__("./node_modules/react-bootstrap/es/Nav.js");
 /* unused harmony reexport Nav */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__Navbar__ = __webpack_require__("./node_modules/react-bootstrap/es/Navbar.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_38__Navbar__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_38__Navbar__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__NavbarBrand__ = __webpack_require__("./node_modules/react-bootstrap/es/NavbarBrand.js");
 /* unused harmony reexport NavbarBrand */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__NavDropdown__ = __webpack_require__("./node_modules/react-bootstrap/es/NavDropdown.js");
@@ -21001,11 +21001,11 @@ var Well = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__Pager__ = __webpack_require__("./node_modules/react-bootstrap/es/Pager.js");
 /* unused harmony reexport Pager */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__Pagination__ = __webpack_require__("./node_modules/react-bootstrap/es/Pagination.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_47__Pagination__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_47__Pagination__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__PaginationButton__ = __webpack_require__("./node_modules/react-bootstrap/es/PaginationButton.js");
 /* unused harmony reexport PaginationButton */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__Panel__ = __webpack_require__("./node_modules/react-bootstrap/es/Panel.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_49__Panel__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_49__Panel__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__PanelGroup__ = __webpack_require__("./node_modules/react-bootstrap/es/PanelGroup.js");
 /* unused harmony reexport PanelGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__Popover__ = __webpack_require__("./node_modules/react-bootstrap/es/Popover.js");
@@ -21017,7 +21017,7 @@ var Well = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ResponsiveEmbed__ = __webpack_require__("./node_modules/react-bootstrap/es/ResponsiveEmbed.js");
 /* unused harmony reexport ResponsiveEmbed */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__Row__ = __webpack_require__("./node_modules/react-bootstrap/es/Row.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_55__Row__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_55__Row__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__SafeAnchor__ = __webpack_require__("./node_modules/react-bootstrap/es/SafeAnchor.js");
 /* unused harmony reexport SafeAnchor */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__SplitButton__ = __webpack_require__("./node_modules/react-bootstrap/es/SplitButton.js");
@@ -21029,7 +21029,7 @@ var Well = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__TabContent__ = __webpack_require__("./node_modules/react-bootstrap/es/TabContent.js");
 /* unused harmony reexport TabContent */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__Table__ = __webpack_require__("./node_modules/react-bootstrap/es/Table.js");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_61__Table__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_61__Table__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__TabPane__ = __webpack_require__("./node_modules/react-bootstrap/es/TabPane.js");
 /* unused harmony reexport TabPane */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__Tabs__ = __webpack_require__("./node_modules/react-bootstrap/es/Tabs.js");
@@ -45995,7 +45995,7 @@ var FoodList = function (_Component) {
         );
       } else {
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["i" /* Table */],
+          __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["j" /* Table */],
           { className: 'foods-table', hover: true },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'thead',
@@ -46154,7 +46154,7 @@ var FoodListPagination = function (_Component) {
   _createClass(FoodListPagination, [{
     key: 'render',
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* Pagination */], {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["g" /* Pagination */], {
         prev: true,
         next: true,
         boundaryLinks: true,
@@ -46253,6 +46253,8 @@ var FoodTableItem = function (_Component) {
   _createClass(FoodTableItem, [{
     key: 'render',
     value: function render() {
+      var roundedValue = this.props.value;
+
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'tr',
         null,
@@ -46264,7 +46266,7 @@ var FoodTableItem = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'td',
           null,
-          this.props.value
+          roundedValue
         )
       );
     }
@@ -46311,6 +46313,11 @@ var Footer = function (_Component) {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "div",
           { className: "inner-footer text-center" },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "p",
+            null,
+            i18n.app.info_text_portion_size
+          ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "p",
             null,
@@ -46363,13 +46370,13 @@ var Header = function (_Component) {
     key: 'render',
     value: function render() {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Navbar */],
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* Navbar */],
         { inverse: true, collapseOnSelect: true, fluid: true },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Navbar */].Header,
+          __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* Navbar */].Header,
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Navbar */].Brand,
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* Navbar */].Brand,
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'a',
@@ -46377,7 +46384,7 @@ var Header = function (_Component) {
               i18n.app.app_name
             )
           ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Navbar */].Toggle, null)
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* Navbar */].Toggle, null)
         )
       );
     }
@@ -46456,9 +46463,6 @@ var FoodContainer = function (_Component) {
       var notFound = this.state.notFound;
 
       var foodTableItems = [{
-        name: i18n.app.energy,
-        value: this.state.food.energy_kj
-      }, {
         name: i18n.app.protein,
         value: this.state.food.protein
       }, {
@@ -46499,7 +46503,7 @@ var FoodContainer = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* Grid */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Row */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Col */],
@@ -46512,16 +46516,27 @@ var FoodContainer = function (_Component) {
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Row */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Col */],
               { md: 12 },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["g" /* Panel */],
-                null,
+                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Panel */],
+                { className: 'food-panel' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Table */],
+                  'h3',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* Label */],
+                    { bsStyle: 'info' },
+                    i18n.app.energy
+                  ),
+                  '\xA0',
+                  this.state.food.energy_kj + " kJ (" + (this.state.food.energy_kj / 4.184).toFixed(2) + " kcal)"
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Table */],
                   { className: 'foods-table', hover: true },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'thead',
@@ -46551,7 +46566,7 @@ var FoodContainer = function (_Component) {
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_6_react_router_dom__["b" /* Link */],
-                { to: '/', className: 'btn btn-default' },
+                { to: '/', className: 'btn btn-default back-to-home-button' },
                 i18n.app.show_foods_list
               )
             )
@@ -46641,6 +46656,7 @@ var FrontContainer = function (_Component) {
             currentPage: response.data.current_page
           }
         });
+        console.log(response.data);
       }.bind(this)).catch(function (error) {
         console.log(error);
       });
@@ -46694,7 +46710,7 @@ var FrontContainer = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* Grid */],
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Row */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Col */],
@@ -46717,14 +46733,14 @@ var FrontContainer = function (_Component) {
             )
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Row */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Col */],
               { md: 12 },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__components_FoodListSearch__["a" /* default */], { handleSearch: this.handleSearch.bind(this) }),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["g" /* Panel */],
+                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Panel */],
                 { className: 'container-panel' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__components_FoodList__["a" /* default */], { foods: this.state.foods, pages: this.state.pages })
               ),
@@ -46794,7 +46810,7 @@ var FoodContainer = function (_Component) {
           __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* Grid */],
           { fluid: true },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Row */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Row */],
             null,
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Col */],
