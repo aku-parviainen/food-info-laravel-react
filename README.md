@@ -6,6 +6,10 @@ Sample app demonstrating laravel - react integration: a food nutrient contents s
 
 To demonstrate laravel - react integration with a simple app.
 
+## Demo
+
+[Click for demo](http://demo.food-information.akuparviainen.fi/)
+
 ## Resources
 
 + [Laravel](https://laravel.com/)
