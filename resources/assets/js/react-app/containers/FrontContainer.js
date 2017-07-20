@@ -38,8 +38,7 @@ class FrontContainer extends Component {
           prevPageUrl: response.data.prev_page_url,
           currentPage: response.data.current_page
         }
-      }); 
-      console.log(response.data);
+      });
     }.bind(this))
     .catch(function (error) {
       console.log(error);
