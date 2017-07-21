@@ -14,7 +14,6 @@ class FoodContainer extends Component {
   render() {
     return (
       <div>
-
         <Grid fluid={true}>
           <Row>
             <Col md={12}>

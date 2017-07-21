@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 class Header extends Component {
 
   render() {
     return (
-      <Navbar inverse collapseOnSelect fluid={true}>
-        <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/">{i18n.app.app_name}</a>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-      </Navbar>
+      <Row>
+        <Col md={12}>
+          <div className="header text-center">
+            <h1>{i18n.app.app_name}</h1>
+            <p>{i18n.app.app_slogan}</p>
+          </div>  
+        </Col>
+      </Row>
     )
   }
 }

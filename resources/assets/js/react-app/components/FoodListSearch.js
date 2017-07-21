@@ -15,6 +15,7 @@ class FoodListSearch extends Component {
             type="text"
             placeholder={i18n.app.search_food_items}
             onKeyUp={this.props.handleSearch}
+            className="food-search-input"
           />
         </FormGroup>
       </form>

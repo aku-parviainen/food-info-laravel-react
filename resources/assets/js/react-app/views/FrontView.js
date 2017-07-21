@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import FoodList from '../components/FoodList';
 import FoodListPagination from '../components/FoodListPagination';
 import FoodListSearch from '../components/FoodListSearch';
+import AppContainer from '../containers/AppContainer';
 
 class FrontContainer extends Component {
 
@@ -40,9 +41,9 @@ class FrontContainer extends Component {
         }
       });
     }.bind(this))
-    .catch(function (error) {
-      console.log(error);
-    });
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   getFoodsBySearch(page = 1) {
@@ -57,9 +58,9 @@ class FrontContainer extends Component {
         }
       });
     }.bind(this))
-    .catch(function (error) {
-      console.log(error);
-    });
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   handlePageChange(eventKey) {
@@ -77,41 +78,24 @@ class FrontContainer extends Component {
         this.getFoodsBySearch();
       }
       else {
-       this.getFoods();
+        this.getFoods();
       }
     });
   }
 
   render() {
     return (
-      <div>
-        <Grid>
-          <Row>
-            <Col md={12}>
-              <div className="text-center">
-                <h1>{i18n.app.app_name}</h1>
-                <p>{i18n.app.app_slogan}</p>
-                <br />
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col md={12}>
-              <FoodListSearch handleSearch={this.handleSearch.bind(this)}/>
+      <AppContainer>
+        <FoodListSearch handleSearch={this.handleSearch.bind(this)} />
 
-              <Panel className="container-panel">
-                <FoodList foods={this.state.foods} pages={this.state.pages} />
-              </Panel>
-              
-              <div className="text-center">
-                  <FoodListPagination pages={this.state.pages} handlePageChange={this.handlePageChange.bind(this)}/>
-                </div>
-            </Col>
-          </Row>              
-        </Grid>
-        
-        <Footer />
-      </div>
+        <Panel className="container-panel">
+          <FoodList foods={this.state.foods} pages={this.state.pages} />
+        </Panel>
+
+        <div className="text-center">
+          <FoodListPagination pages={this.state.pages} handlePageChange={this.handlePageChange.bind(this)} />
+        </div>
+      </AppContainer>
     )
   }
 }
