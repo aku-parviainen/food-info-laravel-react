@@ -46752,26 +46752,7 @@ var FrontContainer = function (_Component) {
     value: function getFoods() {
       var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
 
-      __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/api/foods?page=' + page).then(function (response) {
-        this.setState({
-          foods: response.data.data,
-          pages: {
-            lastPage: response.data.last_page,
-            nextPageUrl: response.data.next_page_url,
-            prevPageUrl: response.data.prev_page_url,
-            currentPage: response.data.current_page
-          }
-        });
-      }.bind(this)).catch(function (error) {
-        console.log(error);
-      });
-    }
-  }, {
-    key: 'getFoodsBySearch',
-    value: function getFoodsBySearch() {
-      var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-
-      __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/api/food-search?q=' + this.state.search + '&page=' + page).then(function (response) {
+      __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/api/foods?page=' + page + '&q=' + this.state.search).then(function (response) {
         this.setState({
           foods: response.data.data,
           pages: {
@@ -46788,19 +46769,14 @@ var FrontContainer = function (_Component) {
   }, {
     key: 'handlePageChange',
     value: function handlePageChange(eventKey) {
-      if (this.state.search == "") {
-        this.getFoods(eventKey);
-      } else {
-        this.getFoodsBySearch(eventKey);
-      }
+      this.getFoods(eventKey);
     }
   }, {
     key: 'handleSearch',
     value: function handleSearch(e) {
       this.setState({ search: e.target.value }, function () {
-        if (this.state.search.length > 1) {
-          this.getFoodsBySearch();
-        } else {
+        // Return all foods if no search parameter is given or return foods based on search (if search parameter is of sufficient length)
+        if (this.state.search.length == "" || this.state.search.length > 1) {
           this.getFoods();
         }
       });

@@ -15,4 +15,3 @@ use Illuminate\Http\Request;
 
 Route::get('foods', 'Api\FoodApiController@getFoods');
 Route::get('foods/{id}', 'Api\FoodApiController@getFoodByID');
-Route::get('food-search', 'Api\FoodApiController@getFoodBySearch');

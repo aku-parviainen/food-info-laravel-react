@@ -9,13 +9,18 @@ use App\Food;
 class FoodApiController extends Controller
 {
     /**
-     * Get all foods paginated
+     * Get foods
      *
      * @return JSON
      */
-    public function getFoods()
+    public function getFoods(Request $request)
     {
-        return Food::paginate(15)->toJson();
+        if ($request->has('q')) {
+            return $this->getFoodBySearch($request);
+        }
+        else { // Get all foods paginateds
+            return Food::paginate(15)->toJson();
+        }
     }
 
     /**
@@ -41,11 +46,11 @@ class FoodApiController extends Controller
      *
      * @return JSON
      */
-    public function getFoodBySearch()
+    private function getFoodBySearch()
     {   
         $query = $_GET['q'];
+        
         $food = Food::where('name', 'LIKE', '%' . $query . '%')->paginate(15);
-
 
         if ($food === null) {
             return response()->json([
