@@ -8,7 +8,7 @@ To demonstrate laravel - react integration with a simple app.
 
 ## Demo
 
-[Click for demo](http://demo.food-information.akuparviainen.fi/)
+[Click for demo](https://food-info-demo.akuparviainen.fi/)
 
 ## Resources
 
